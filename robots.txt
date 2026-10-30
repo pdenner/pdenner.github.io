@@ -1,0 +1,13 @@
+# Googlebot may crawl so it reads each page's noindex tag; a blocked crawler
+# never sees noindex and can still list a bare URL that another site links to.
+# Every other crawler is blocked outright. If the URL turns up in Bing or another
+# engine, add an "Allow: /" group for that crawler so it reads noindex too.
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: *
+Disallow: /
